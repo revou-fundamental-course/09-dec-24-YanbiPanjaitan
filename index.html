@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="home">
+        <div class="banner">
+            <div class="slide" id="slide-1">Welcome to Our Travel Agency</div>
+            <div class="slide" id="slide-2">Explore the World with Us</div>
+            <div class="slide" id="slide-3">Book Your Adventure Today!</div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#packages">Our Packages</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="packages">
+            <h2>Our Packages</h2>
+            <div class="package">Package 1: Beach Getaway</div>
+            <div class="package">Package 2: Mountain Adventure</div>
+            <div class="package">Package 3: City Escape</div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="destination">Travel Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

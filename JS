@@ -1,0 +1,37 @@
+// Auto-slide for Banner
+let currentIndex = 0;
+
+function slideBanner() {
+    const banners = document.querySelectorAll('.banner img');
+    banners.forEach((img, index) => {
+        img.style.display = index === currentIndex ? 'block' : 'none';
+    });
+    currentIndex = (currentIndex + 1) % banners.length;
+}
+
+setInterval(slideBanner, 3000);
+
+// Form Validation
+function validateForm(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const destination = document.getElementById('destination').value.trim();
+
+    if (!name || !email || !destination) {
+        alert('Please fill out all fields.');
+        return false;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+
+    alert('Form submitted successfully!');
+    return true;
+}
+
+// Attach event listener
+document.getElementById('contactForm').addEventListener('submit', validateForm);
